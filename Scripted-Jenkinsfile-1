@@ -1,6 +1,7 @@
 node{
 def mavenHome = tool name: "maven3.9.6" 
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '5', daysToKeepStr: '1', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: '']])
+echo 'hi this is siva'
 stage('CheckOutCode'){  
 git branch: 'Devlopment', credentialsId: '35047eb0-5c4f-4156-9b15-8adc8c837d62', url: 'https://github.com/Devops414/maven-repo.git'
 }
